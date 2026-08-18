@@ -1,0 +1,94 @@
+.app {
+  min-height: 100vh;
+  padding: 40px;
+  background: #fff5f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+.app h1 {
+  text-align: center;
+  color: #c2185b;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de productos */
+.catalogo {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Tarjeta */
+.producto {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(194, 24, 91, 0.2);
+}
+
+/* Imagen */
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Nombre */
+.producto h2 {
+  color: #ad1457;
+  font-size: 22px;
+  margin: 18px 0 10px;
+}
+
+/* Descripción */
+.producto p {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* Precio */
+.producto strong {
+  display: block;
+  color: #c2185b;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Adaptación para tablets */
+@media (max-width: 900px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
+  }
+
+  .app h1 {
+    font-size: 30px;
+  }
+
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+}
